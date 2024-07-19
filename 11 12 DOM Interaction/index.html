@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>DOM Interaction Demo</title>
+    <script type="text/javascript" src='listy.js'></script>
+  </head>
+
+  <body>
+
+    <h1>Listy</h1>
+
+    <div class="commands">
+      <button id='add'>Add</button>
+      <button id='remove'>Remove</button>
+      <button id='find'>Find</button>
+      <button id='silly'>Silly</button>
+    </div>
+
+    <div class="listarea">
+      <ol type="1" start="0" id="listy">
+      </ol>
+    </div>
+
+  </body>
+
+  <!--
+
+    Possible demo steps
+
+    - students directed to load and play with page (don't look at console)
+    - students asked to describe page behaviors
+    - view source: why doesn't the page match?
+    - now open the console, and refresh the page
+    - read the console output and try to infer the JS code that is running
+    - discussion of what's happening so far in JS
+    - draw the DOM tree on the board
+    - re-playing with the buttons: analyze the code for each task
+      - add
+      - remove
+      - find (why doesn't anything happen?)
+      - silly
+    - find exercise: implement search
+      - find first match, report with alert (or report not found)
+      - find all matches, report with alert (or report not found)
+      - find all matches, highlight inline
+      - implement code to re-find
+        - clear any existing highlighting
+        - re-apply highlighting with new term
+      - change to "immediate" finding with input box
+
+    Possible topics for demo
+
+    - window.innerWidth and window.innerHeight
+    - window.alert() window.confirm() window.open()
+    - using async or defer in <script> tag to allow concurrent loading
+    - working in the DOM: node/element concept
+      - getting elements (HTML): TagName, ClassName, Id
+      - getting elements (CSS): querySelector, querySelectorAll
+      - element interaction
+        - accessing/setting properties (example: img.src)
+        - removing properties (example: img.removeAttribute('src'))
+        - exception: classes
+          - elem.classList.add(className)
+          - elem.classList.remove(className)
+          - elem.classList.toggle(className)
+          - elem.className
+        - adjusting associated data: .innerHTML and .textContent
+      - element navigation
+        - .parentNode
+        - .children (no text nodes) vs. .childNodes (everything)
+      - element creation and destruction
+        - elem.appendChild()
+        - elem.insertBefore()
+        - elem.removeChild()  (often: elem.parentNode.removeChild(elem))
+        - document.createElement()
+        - document.createTextNode()
+      - element style manipulation
+        - .style.getPropertyValue(property)
+        - .style.setProperty(property, value)
+        - .style.removeProperty(property)
+      - document style sheet manipulation
+        - document.styleSheets[n].insertRule(cssRule)
+        - document.styleSheets[n].deleteRule(index)
+        - document.styleSheets[n].cssRules[n].style.{get/set/remove}Property()
+    - events
+      - concept
+      - handlers/listeners
+      - focus, blur, keyup, keydown, mouseover, mouseout, click, input, etc.
+      - special note: DOMContentLoaded
+      - addEventListener(event, function)
+        - function can be (event); if so, inner code uses event.target
+        - function can be (); if so, inner code uses this instead of event.target
+      - capturing, target, bubbling phases (default is bubbling)
+        - some events bubble, some don't (focus, blur, change don't bubble)
+        - stopPropogation() explicitly stops the process when called
+        - preventDefault() stops a built-in handler from executing
+    - timers
+      - setTimeout(function, msDelay) and clearTimeout() (one-time)
+      - setInterval(function, msDelay) and clearInterval() (repeating)
+  -->
+
+</html>
